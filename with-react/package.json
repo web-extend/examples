@@ -3,9 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "rsbuild dev --open",
-    "build": "rsbuild build",
-    "preview": "rsbuild preview"
+    "dev": "web-extend rsbuild:dev --open",
+    "build": "web-extend rsbuild:build",
+    "preview": "web-extend preview",
+    "zip": "web-extend zip"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -16,6 +17,9 @@
     "@rsbuild/plugin-react": "^1.0.7",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.2"
+    "@web-extend/rsbuild-plugin": "0.0.1-beta.1",
+    "typescript": "^5.7.2",
+    "web-ext": "^8.3.0",
+    "web-extend": "0.0.1-beta.1"
   }
 }
