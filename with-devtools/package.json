@@ -1,0 +1,25 @@
+{
+  "name": "with-devtools",
+  "version": "1.0.0",
+  "private": "true",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "web-extend rsbuild:dev --open",
+    "build": "web-extend rsbuild:build",
+    "preview": "web-extend preview",
+    "zip": "web-extend zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "A basic browser extension",
+  "devDependencies": {
+    "@rsbuild/core": "^1.2.3",
+    "@types/chrome": "^0.0.290",
+    "@web-extend/rsbuild-plugin": "0.0.1-beta.1",
+    "typescript": "^5.7.2",
+    "web-ext": "^8.3.0",
+    "web-extend": "0.0.1-beta.1"
+  }
+}
