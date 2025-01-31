@@ -1,5 +1,5 @@
 import './content.css';
-import type { ContentScriptConfig } from '../../lib';
+import type { ContentScriptConfig } from '@web-extend/rsbuild-plugin';
 import './env.d.ts';
 
 console.log('content');

@@ -1,5 +1,5 @@
 {
-  "name": "with-devtools",
+  "name": "with-multi-sandboxes",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "zip": "web-extend zip"
   },
   "devDependencies": {
-    "@rsbuild/core": "^1.2.3",
+    "@rsbuild/core": "^1.1.8",
     "@types/chrome": "^0.0.290",
     "@web-extend/rsbuild-plugin": "0.0.1-beta.1",
     "typescript": "^5.7.2",
