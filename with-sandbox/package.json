@@ -1,5 +1,5 @@
 {
-  "name": ".",
+  "name": "with-sandbox",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -12,9 +12,9 @@
   "devDependencies": {
     "@rsbuild/core": "^1.2.3",
     "@types/chrome": "^0.0.290",
-    "@web-extend/rsbuild-plugin": "0.0.1-beta.1",
+    "@web-extend/rsbuild-plugin": "0.0.1-beta.3",
     "typescript": "^5.7.2",
     "web-ext": "^8.3.0",
-    "web-extend": "0.0.1-beta.1"
+    "web-extend": "0.0.1-beta.3"
   }
 }

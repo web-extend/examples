@@ -17,9 +17,9 @@
   "description": "A basic browser extension",
   "devDependencies": {
     "@rsbuild/core": "^1.2.3",
-    "@web-extend/rsbuild-plugin": "0.0.1-beta.1",
+    "@web-extend/rsbuild-plugin": "0.0.1-beta.3",
     "typescript": "^5.7.2",
     "web-ext": "^8.3.0",
-    "web-extend": "0.0.1-beta.1"
+    "web-extend": "0.0.1-beta.3"
   }
 }
