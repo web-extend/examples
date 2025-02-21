@@ -34,8 +34,6 @@ export default defineConfig({
   tools: {
     rspack: {
       plugins: [
-        UnoCSSRspackPlugin({}),
-
         AutoImport({
           imports: [
             "vue",
@@ -61,6 +59,9 @@ export default defineConfig({
 
         // https://github.com/antfu/unplugin-icons
         Icons(),
+
+        // https://github.com/unocss/unocss
+        UnoCSSRspackPlugin(),
       ],
     },
   },
