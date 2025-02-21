@@ -1,13 +1,9 @@
 import { defineConfig } from 'unocss/vite'
-import { presetAttributify, presetIcons, presetUno, transformerDirectives } from 'unocss'
+import { presetAttributify, presetIcons, presetWind3 } from 'unocss'
 
 export default defineConfig({
-  presets: [
-    presetUno(),
-    presetAttributify(),
-    presetIcons(),
-  ],
-  transformers: [
-    transformerDirectives(),
-  ],
+  presets: [presetWind3(), presetAttributify(), presetIcons()],
+  // transformers: [
+  //   transformerDirectives(),
+  // ],
 })
