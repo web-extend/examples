@@ -5,7 +5,11 @@ body,
   padding: 0;
 }
 
-.btn {
+body {
+  min-width: 100px;
+}
+
+/* .btn {
   @apply px-4 py-1 rounded inline-block
     bg-teal-600 text-white cursor-pointer
     hover:bg-teal-700
@@ -17,4 +21,4 @@ body,
     opacity-75 transition duration-200 ease-in-out
     hover:opacity-100 hover:text-teal-600;
   font-size: 0.9em;
-}
+} */
