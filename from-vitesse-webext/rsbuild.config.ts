@@ -8,9 +8,15 @@ import Icons from "unplugin-icons/rspack";
 import IconsResolver from "unplugin-icons/resolver";
 import { isDev, r } from "./scripts/utils";
 import packageJson from "./package.json";
+import manifest from "./src/manifest";
 
 export default defineConfig({
-  plugins: [pluginVue(), pluginWebExtend()],
+  plugins: [
+    pluginVue(),
+    pluginWebExtend({
+      manifest,
+    }),
+  ],
   html: {
     mountId: "app",
   },
