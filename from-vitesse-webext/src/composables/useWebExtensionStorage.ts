@@ -157,5 +157,5 @@ export function useWebExtensionStorage<T>(
     })
   }
 
-  return data as RemovableRef<T>
+  return data as unknown as RemovableRef<T>
 }

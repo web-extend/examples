@@ -1,14 +1,6 @@
 import { onMessage, sendMessage } from "webext-bridge/background";
 import type { Tabs } from "webextension-polyfill";
 
-// only on dev mode
-// if (import.meta.hot) {
-//   // @ts-expect-error for background HMR
-//   import('/@vite/client')
-//   // load latest content script
-//   import('./contentScriptHMR')
-// }
-
 // remove or turn this off if you don't use side panel
 const USE_SIDE_PANEL = true;
 
