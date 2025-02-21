@@ -6,7 +6,8 @@ import Components from "unplugin-vue-components/rspack";
 import AutoImport from "unplugin-auto-import/rspack";
 import Icons from "unplugin-icons/rspack";
 import IconsResolver from "unplugin-icons/resolver";
-import { r } from "./scripts/utils";
+import { isDev, r } from "./scripts/utils";
+import packageJson from "./package.json";
 
 export default defineConfig({
   plugins: [pluginVue(), pluginWebExtend()],
@@ -16,6 +17,12 @@ export default defineConfig({
   resolve: {
     alias: {
       "~/": "./src/",
+    },
+  },
+  source: {
+    define: {
+      __DEV__: isDev,
+      __NAME__: JSON.stringify(packageJson.name),
     },
   },
   tools: {
