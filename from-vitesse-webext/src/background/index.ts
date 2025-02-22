@@ -1,59 +1,59 @@
-import { onMessage, sendMessage } from "webext-bridge/background";
-import type { Tabs } from "webextension-polyfill";
+/* eslint-disable style/brace-style */
+import { onMessage, sendMessage } from 'webext-bridge/background'
+import type { Tabs } from 'webextension-polyfill'
 
-// remove or turn this off if you don't use side panel
-const USE_SIDE_PANEL = true;
+const target = import.meta.env.WEB_EXTEND_TARGET || ''
 
 // to toggle the sidepanel with the action button in chromium:
-if (USE_SIDE_PANEL) {
+if (target.includes('chrome')) {
   // @ts-expect-error missing types
   browser.sidePanel
     .setPanelBehavior({ openPanelOnActionClick: true })
-    .catch((error: unknown) => console.error(error));
+    .catch((error: unknown) => console.error(error))
 }
 
 browser.runtime.onInstalled.addListener((): void => {
   // eslint-disable-next-line no-console
-  console.log("Extension installed");
-});
+  console.log('Extension installed')
+})
 
-let previousTabId = 0;
+let previousTabId = 0
 
 // communication example: send previous tab title from background page
 // see shim.d.ts for type declaration
 browser.tabs.onActivated.addListener(async ({ tabId }) => {
   if (!previousTabId) {
-    previousTabId = tabId;
-    return;
+    previousTabId = tabId
+    return
   }
 
-  let tab: Tabs.Tab;
+  let tab: Tabs.Tab
 
   try {
-    tab = await browser.tabs.get(previousTabId);
-    previousTabId = tabId;
+    tab = await browser.tabs.get(previousTabId)
+    previousTabId = tabId
   } catch {
-    return;
+    return
   }
 
   // eslint-disable-next-line no-console
-  console.log("previous tab", tab);
+  console.log('previous tab', tab)
   sendMessage(
-    "tab-prev",
+    'tab-prev',
     { title: tab.title },
-    { context: "content-script", tabId }
-  );
-});
+    { context: 'content-script', tabId },
+  )
+})
 
-onMessage("get-current-tab", async () => {
+onMessage('get-current-tab', async () => {
   try {
-    const tab = await browser.tabs.get(previousTabId);
+    const tab = await browser.tabs.get(previousTabId)
     return {
       title: tab?.title,
-    };
+    }
   } catch {
     return {
       title: undefined,
-    };
+    }
   }
-});
+})
