@@ -1,14 +1,14 @@
-import { defineConfig } from "@rsbuild/core";
-import { pluginWebExtend } from "@web-extend/rsbuild-plugin";
-import { pluginVue } from "@rsbuild/plugin-vue";
-import { UnoCSSRspackPlugin } from "@unocss/webpack/rspack";
-import Components from "unplugin-vue-components/rspack";
-import AutoImport from "unplugin-auto-import/rspack";
-import Icons from "unplugin-icons/rspack";
-import IconsResolver from "unplugin-icons/resolver";
-import { isDev, r } from "./scripts/utils";
-import packageJson from "./package.json";
-import manifest from "./src/manifest";
+import { defineConfig } from '@rsbuild/core'
+import { pluginWebExtend } from '@web-extend/rsbuild-plugin'
+import { pluginVue } from '@rsbuild/plugin-vue'
+// import { UnoCSSRspackPlugin } from '@unocss/webpack/rspack'
+import Components from 'unplugin-vue-components/rspack'
+import AutoImport from 'unplugin-auto-import/rspack'
+import Icons from 'unplugin-icons/rspack'
+import IconsResolver from 'unplugin-icons/resolver'
+import { isDev, r } from './scripts/utils'
+import packageJson from './package.json'
+import manifest from './src/manifest'
 
 export default defineConfig({
   plugins: [
@@ -18,11 +18,11 @@ export default defineConfig({
     }),
   ],
   html: {
-    mountId: "app",
+    mountId: 'app',
   },
   resolve: {
     alias: {
-      "~/": "./src/",
+      '~/': './src/',
     },
   },
   source: {
@@ -33,26 +33,36 @@ export default defineConfig({
   },
   tools: {
     rspack: {
+      watchOptions: {
+        // for @unocss/postcss
+        ignored: [
+          '**/.git',
+          '**/node_modules',
+          '**/components.d.ts',
+          '**/auto-imports.d.ts',
+          '**/dist',
+        ],
+      },
       plugins: [
         AutoImport({
           imports: [
-            "vue",
+            'vue',
             {
-              "webextension-polyfill": [["=", "browser"]],
+              'webextension-polyfill': [['=', 'browser']],
             },
           ],
-          dts: r("src/auto-imports.d.ts"),
+          dts: r('src/auto-imports.d.ts'),
         }),
 
         // https://github.com/antfu/unplugin-vue-components
         Components({
-          dirs: [r("src/components")],
+          dirs: [r('src/components')],
           // generate `components.d.ts` for ts support with Volar
-          dts: r("src/components.d.ts"),
+          dts: r('src/components.d.ts'),
           resolvers: [
             // auto import icons
             IconsResolver({
-              prefix: "",
+              prefix: '',
             }),
           ],
         }),
@@ -61,8 +71,8 @@ export default defineConfig({
         Icons(),
 
         // https://github.com/unocss/unocss
-        UnoCSSRspackPlugin(),
+        // UnoCSSRspackPlugin(),
       ],
     },
   },
-});
+})
