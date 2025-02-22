@@ -1,7 +1,6 @@
 import { defineConfig } from '@rsbuild/core'
 import { pluginWebExtend } from '@web-extend/rsbuild-plugin'
 import { pluginVue } from '@rsbuild/plugin-vue'
-// import { UnoCSSRspackPlugin } from '@unocss/webpack/rspack'
 import Components from 'unplugin-vue-components/rspack'
 import AutoImport from 'unplugin-auto-import/rspack'
 import Icons from 'unplugin-icons/rspack'
@@ -33,16 +32,6 @@ export default defineConfig({
   },
   tools: {
     rspack: {
-      watchOptions: {
-        // for @unocss/postcss
-        ignored: [
-          '**/.git',
-          '**/node_modules',
-          '**/components.d.ts',
-          '**/auto-imports.d.ts',
-          '**/dist',
-        ],
-      },
       plugins: [
         AutoImport({
           imports: [
@@ -69,9 +58,6 @@ export default defineConfig({
 
         // https://github.com/antfu/unplugin-icons
         Icons(),
-
-        // https://github.com/unocss/unocss
-        // UnoCSSRspackPlugin(),
       ],
     },
   },
