@@ -59,7 +59,7 @@
     "webextension-polyfill": "^0.12.0"
   },
   "simple-git-hooks": {
-    "pre-commit": "echo skip"
+    "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
     "./*": "eslint --fix"
