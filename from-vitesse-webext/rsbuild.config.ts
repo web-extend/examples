@@ -43,7 +43,6 @@ export default defineConfig({
           dts: r('src/auto-imports.d.ts'),
         }),
 
-        // https://github.com/antfu/unplugin-vue-components
         Components({
           dirs: [r('src/components')],
           // generate `components.d.ts` for ts support with Volar
@@ -56,7 +55,6 @@ export default defineConfig({
           ],
         }),
 
-        // https://github.com/antfu/unplugin-icons
         Icons(),
       ],
     },

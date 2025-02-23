@@ -16,5 +16,11 @@
     "lint-staged": "^15.4.3",
     "typescript": "^5.7.2"
   },
-  "packageManager": "pnpm@10.0.0"
+  "packageManager": "pnpm@10.0.0",
+  "pnpm": {
+    "overrides": {
+      "web-extend": "~/Projects/web-extend/packages/cli",
+      "@web-extend/rsbuild-plugin": "~/Projects/web-extend/packages/rsbuild"
+    }
+  }
 }
