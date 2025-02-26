@@ -4,7 +4,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "description": "Migrate to WebExtend from Vitese WebExt",
+  "description": "Migrate to WebExtend",
   "scripts": {
     "dev": "web-extend rsbuild:dev --open",
     "build": "web-extend rsbuild:build",
@@ -36,7 +36,7 @@
     "@vue/compiler-sfc": "^3.4.38",
     "@vue/test-utils": "^2.4.6",
     "@vueuse/core": "^11.0.1",
-    "@web-extend/rsbuild-plugin": "0.0.1-beta.3",
+    "@web-extend/rsbuild-plugin": "0.0.1-beta.5",
     "eslint": "^9.9.0",
     "fs-extra": "^11.2.0",
     "jsdom": "^24.1.1",
@@ -54,7 +54,7 @@
     "vitest": "^2.0.5",
     "vue": "^3.5.13",
     "web-ext": "^8.2.0",
-    "web-extend": "0.0.1-beta.3",
+    "web-extend": "0.0.1-beta.5",
     "webext-bridge": "^6.0.1",
     "webextension-polyfill": "^0.12.0"
   },
