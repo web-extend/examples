@@ -1,5 +1,5 @@
-import './index.css';
-import type { ContentScriptConfig } from '@web-extend/rsbuild-plugin';
+import "./index.css";
+import type { ContentScriptConfig } from "web-extend";
 
 function render(root: HTMLElement) {
   root.innerHTML = `<div class="web-extend-content-container">
@@ -29,24 +29,24 @@ function render(root: HTMLElement) {
 
   const handleClick = () => {
     const el = document.getElementsByClassName(
-      'web-extend-content',
+      "web-extend-content"
     )[0] as HTMLElement;
     if (el) {
-      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+      el.style.display = el.style.display === "none" ? "block" : "none";
     }
   };
-  const btn = document.querySelector('.web-extend-content-container svg');
-  btn?.addEventListener('click', handleClick);
+  const btn = document.querySelector(".web-extend-content-container svg");
+  btn?.addEventListener("click", handleClick);
 }
 
-let rootEl = document.getElementById('web-extend-content');
+let rootEl = document.getElementById("web-extend-content");
 if (!rootEl) {
-  rootEl = document.createElement('div');
-  rootEl.id = 'web-extend-content';
+  rootEl = document.createElement("div");
+  rootEl.id = "web-extend-content";
   document.body.appendChild(rootEl);
   render(rootEl);
 }
 
 export const config: ContentScriptConfig = {
-  matches: ['https://developer.mozilla.org/*'],
+  matches: ["https://developer.mozilla.org/*"],
 };
