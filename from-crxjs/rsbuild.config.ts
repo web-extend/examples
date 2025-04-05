@@ -16,9 +16,6 @@ export default defineConfig({
       manifest,
     }),
   ],
-  dev: {
-    liveReload: false,
-  },
   server: {
     cors: {
       origin: "*",

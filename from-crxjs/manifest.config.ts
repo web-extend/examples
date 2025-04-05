@@ -7,9 +7,9 @@ export default defineManifest({
   version: pkg.version,
   action: {
     default_icon: {
-      16: "public/logo.png",
-      48: "public/logo.png",
-      128: "public/logo.png",
+      16: "./src/assets/logo.png",
+      48: "./src/assets/logo.png",
+      128: "./src/assets/logo.png",
     },
     default_popup: "src/popup/main.tsx",
   },
