@@ -27,10 +27,10 @@ export default defineConfig({
       },
       output: {
         filenameHash: false,
-        distPath: {
-          js: '',
-          css: ''
-        }
+        // distPath: {
+        //   js: '',
+        //   css: ''
+        // }
       },
     },
   },
