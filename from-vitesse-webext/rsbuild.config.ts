@@ -1,5 +1,4 @@
 import { defineConfig } from '@rsbuild/core'
-import { pluginWebExtend } from '@web-extend/rsbuild-plugin'
 import { pluginVue } from '@rsbuild/plugin-vue'
 import Components from 'unplugin-vue-components/rspack'
 import AutoImport from 'unplugin-auto-import/rspack'
@@ -7,14 +6,10 @@ import Icons from 'unplugin-icons/rspack'
 import IconsResolver from 'unplugin-icons/resolver'
 import { isDev, r } from './scripts/utils'
 import packageJson from './package.json'
-import manifest from './src/manifest'
 
 export default defineConfig({
   plugins: [
     pluginVue(),
-    pluginWebExtend({
-      manifest,
-    }),
   ],
   html: {
     mountId: 'app',
