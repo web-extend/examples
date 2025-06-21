@@ -1,3 +1,3 @@
 import manifest from './src/manifest'
 
-export { manifest }
+export default { manifest }
