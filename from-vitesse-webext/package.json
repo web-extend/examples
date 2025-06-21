@@ -52,7 +52,7 @@
     "vite": "^5.4.2",
     "vitest": "^2.0.5",
     "vue": "^3.5.13",
-    "web-ext": "^8.2.0",
+    "web-ext": "^8.8.0",
     "web-extend": "0.0.1-beta.5",
     "webext-bridge": "^6.0.1",
     "webextension-polyfill": "^0.12.0"
