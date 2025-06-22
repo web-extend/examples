@@ -2,6 +2,7 @@
   "name": "with-react",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "web-extend dev --open",
     "build": "web-extend build",
@@ -19,6 +20,6 @@
     "@types/react-dom": "^19.0.0",
     "typescript": "^5.7.2",
     "web-ext": "^8.8.0",
-    "web-extend": "0.0.1-beta.1"
+    "web-extend": "0.0.1"
   }
 }
