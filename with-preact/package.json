@@ -1,7 +1,7 @@
 {
-  "name": "with-sandbox",
-  "private": true,
+  "name": "with-preact",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "web-extend dev --open",
@@ -9,10 +9,14 @@
     "preview": "web-extend preview",
     "zip": "web-extend zip"
   },
+  "dependencies": {
+    "preact": "^10.26.8"
+  },
   "devDependencies": {
-    "@rsbuild/core": "^1.2.3",
+    "@rsbuild/core": "^1.3.22",
+    "@rsbuild/plugin-preact": "^1.4.0",
     "@types/chrome": "^0.0.290",
-    "typescript": "^5.7.2",
+    "typescript": "^5.8.3",
     "web-ext": "^8.8.0",
     "web-extend": "0.0.1"
   }

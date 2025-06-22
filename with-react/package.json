@@ -2,9 +2,10 @@
   "name": "with-react",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "web-extend rsbuild:dev --open",
-    "build": "web-extend rsbuild:build",
+    "dev": "web-extend dev --open",
+    "build": "web-extend build",
     "preview": "web-extend preview",
     "zip": "web-extend zip"
   },
@@ -13,13 +14,12 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "^1.2.3",
-    "@rsbuild/plugin-react": "^1.0.7",
+    "@rsbuild/core": "^1.3.22",
+    "@rsbuild/plugin-react": "^1.3.2",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "@web-extend/rsbuild-plugin": "0.0.1-beta.1",
     "typescript": "^5.7.2",
-    "web-ext": "^8.3.0",
-    "web-extend": "0.0.1-beta.1"
+    "web-ext": "^8.8.0",
+    "web-extend": "0.0.1"
   }
 }

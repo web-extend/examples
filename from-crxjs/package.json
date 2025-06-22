@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "web-extend rsbuild:dev --open",
-    "build": "web-extend rsbuild:build",
+    "dev": "web-extend dev --open",
+    "build": "web-extend build",
     "preview": "web-extend preview",
     "zip": "web-extend zip"
   },
@@ -22,11 +22,10 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
-    "@web-extend/rsbuild-plugin": "0.0.1-beta.5",
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
     "vite-plugin-zip-pack": "^1.2.4",
-    "web-ext": "^8.5.0",
-    "web-extend": "0.0.1-beta.6"
+    "web-ext": "^8.8.0",
+    "web-extend": "0.0.1"
   }
 }

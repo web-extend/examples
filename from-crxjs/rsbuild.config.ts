@@ -1,8 +1,6 @@
 import { resolve } from "node:path";
 import { defineConfig } from "@rsbuild/core";
 import { pluginReact } from "@rsbuild/plugin-react";
-import { pluginWebExtend } from "@web-extend/rsbuild-plugin";
-import manifest from "./manifest.config";
 
 export default defineConfig({
   resolve: {
@@ -10,12 +8,7 @@ export default defineConfig({
       "@": `${resolve(__dirname, "src")}`,
     },
   },
-  plugins: [
-    pluginReact(),
-    pluginWebExtend({
-      manifest,
-    }),
-  ],
+  plugins: [pluginReact()],
   server: {
     cors: {
       origin: "*",
