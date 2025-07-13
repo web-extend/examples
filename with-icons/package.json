@@ -10,7 +10,7 @@
     "zip": "web-extend zip"
   },
   "devDependencies": {
-    "@rsbuild/core": "^1.2.3",
+    "@rsbuild/core": "^1.4.6",
     "typescript": "^5.7.2",
     "web-ext": "^8.8.0",
     "web-extend": "0.0.1"

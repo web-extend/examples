@@ -1,4 +1,4 @@
-console.log('three');
+console.log('three1');
 
 export const config = {
   matches: ['https://www.google.com/'],
