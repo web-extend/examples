@@ -56,7 +56,9 @@ export default defineConfig({
           ],
         }),
 
-        Icons(),
+        Icons({
+          // autoInstall: true,
+        }),
       ],
     },
   },
