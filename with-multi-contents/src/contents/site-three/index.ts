@@ -1,4 +1,4 @@
-console.log('three3');
+console.log('three');
 
 // support hmr in dev mode
 if (module.hot) {

@@ -2,6 +2,6 @@ import { defineWebExtConfig } from "web-extend";
 
 export default defineWebExtConfig({
   run: {
-    startUrl: "https://baidu.com",
+    startUrl: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
 });

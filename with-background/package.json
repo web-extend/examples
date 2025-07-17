@@ -12,10 +12,10 @@
     "zip": "web-extend zip"
   },
   "devDependencies": {
-    "@rsbuild/core": "^1.3.22",
+    "@rsbuild/core": "^1.4.6",
     "typescript": "^5.7.2",
     "web-ext": "^8.8.0",
-    "web-extend": "0.0.1"
+    "web-extend": "^0.0.2"
   },
   "keywords": [],
   "author": "",
