@@ -1,12 +1,12 @@
-/* eslint-disable import/newline-after-import */
 /* eslint-disable no-console */
 import { onMessage } from 'webext-bridge/content-script'
 import { createApp } from 'vue'
+import styles from './style.css?inline'
 import App from './views/App.vue'
 import { setupApp } from '~/logic/common-setup'
-import './style.css'
 
-;(() => {
+(() => {
+// Firefox `browser.tabs.executeScript()` requires scripts return a primitive value
   console.info('[vitesse-webext] Hello world from content script')
 
   // communication example: send previous tab title from background page
@@ -18,16 +18,15 @@ import './style.css'
   const container = document.createElement('div')
   container.id = __NAME__
   const root = document.createElement('div')
+  const shadowDOM = container.attachShadow?.({ mode: __DEV__ ? 'open' : 'closed' }) || container
 
-  // Note: Shadow DOM is not supported by Rsbuild, see https://github.com/web-infra-dev/rsbuild/issues/4562
-  // const styleEl = document.createElement('link')
-  // const shadowDOM = container.attachShadow?.({ mode: __DEV__ ? 'open' : 'closed' }) || container
-  // styleEl.setAttribute('rel', 'stylesheet')
-  // styleEl.setAttribute('href', browser.runtime.getURL('dist/contentScripts/style.css'))
-  // shadowDOM.appendChild(styleEl)
-  // shadowDOM.appendChild(root)
+  // use shadow dom to avoid style leak
+  const sheet = new CSSStyleSheet()
+  sheet.replaceSync(styles)
+  shadowDOM.adoptedStyleSheets = [sheet]
 
-  container.appendChild(root)
+  shadowDOM.appendChild(root)
+
   document.body.appendChild(container)
   const app = createApp(App)
   setupApp(app)
