@@ -1,4 +1,4 @@
-# WebExtension Vite Starter
+# WebExtension Starter
 
 A WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template, forked from [vitesse-webext](https://github.com/antfu-collective/vitesse-webext) and powered by [WebExtend](https://github.com/web-extend/web-extend) and [Rsbuild](https://github.com/web-infra-dev/rsbuild).
 
