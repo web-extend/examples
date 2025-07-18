@@ -4,13 +4,11 @@ import Components from 'unplugin-vue-components/rspack'
 import AutoImport from 'unplugin-auto-import/rspack'
 import Icons from 'unplugin-icons/rspack'
 import IconsResolver from 'unplugin-icons/resolver'
-import { isDev, r } from './scripts/utils'
+import { isDev, port, r } from './scripts/utils'
 import packageJson from './package.json'
 
 export default defineConfig({
-  plugins: [
-    pluginVue(),
-  ],
+  plugins: [pluginVue()],
   output: {
     // https://github.com/web-infra-dev/rsbuild/issues/3217
     sourceMap: {
@@ -30,6 +28,9 @@ export default defineConfig({
       __DEV__: isDev,
       __NAME__: JSON.stringify(packageJson.name),
     },
+  },
+  server: {
+    port,
   },
   tools: {
     rspack: {
@@ -56,7 +57,7 @@ export default defineConfig({
           ],
         }),
 
-        Icons(),
+        Icons({}),
       ],
     },
   },

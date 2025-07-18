@@ -1,7 +1,5 @@
-import type { Manifest } from 'webextension-polyfill'
-
 function getManifest() {
-  const manifest: Partial<Manifest.WebExtensionManifest> = {
+  const manifest = {
     permissions: ['tabs', 'storage', 'activeTab'],
     host_permissions: ['*://*/*'],
   }
