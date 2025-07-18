@@ -8,9 +8,7 @@ import { isDev, r } from './scripts/utils'
 import packageJson from './package.json'
 
 export default defineConfig({
-  plugins: [
-    pluginVue(),
-  ],
+  plugins: [pluginVue()],
   output: {
     // https://github.com/web-infra-dev/rsbuild/issues/3217
     sourceMap: {
@@ -56,9 +54,7 @@ export default defineConfig({
           ],
         }),
 
-        Icons({
-          // autoInstall: true,
-        }),
+        Icons({}),
       ],
     },
   },
