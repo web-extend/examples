@@ -1,6 +1,6 @@
 # WebExtension Vite Starter
 
-A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template.
+A WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template, forked from [vitesse-webext](https://github.com/antfu-collective/vitesse-webext) and powered by [WebExtend](https://github.com/web-extend/web-extend) and [Rsbuild](https://github.com/web-infra-dev/rsbuild).
 
 <p align="center">
 <sub>Popup</sub><br/>
@@ -13,7 +13,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 ## Features
 
-- ⚡️ **Instant HMR** - use **Vite** on dev (no more refresh!)
+- ⚡️ **Instant HMR** - use **Rsbuild** on dev (no more refresh!)
 - 🥝 Vue 3 - Composition API, [`<script setup>` syntax](https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md) and more!
 - 💬 Effortless communications - powered by [`webext-bridge`](https://github.com/antfu/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
 - 🌈 [UnoCSS](https://github.com/unocss/unocss) - The instant on-demand Atomic CSS engine.
@@ -31,7 +31,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - [`webextension-polyfill`](https://github.com/mozilla/webextension-polyfill) - WebExtension browser API Polyfill with types
 - [`webext-bridge`](https://github.com/antfu/webext-bridge) - effortlessly communication between contexts
 
-### Vite Plugins
+### Rsbuild Plugins
 
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use `browser` and Vue Composition API without importing
 - [`unplugin-vue-components`](https://github.com/antfu/vite-plugin-components) - components auto import
@@ -72,8 +72,9 @@ If you prefer to do it manually with the cleaner git history
 > If you don't have pnpm installed, run: npm install -g pnpm
 
 ```bash
-npx degit antfu/vitesse-webext my-webext
-cd my-webext
+npx giget@latest gh:web-extend/examples/with-vitesse-webext my-extension-app
+
+cd my-extension-app
 pnpm i
 ```
 
@@ -82,15 +83,13 @@ pnpm i
 ### Folders
 
 - `src` - main source.
-  - `contentScript` - scripts and components to be injected as `content_script`
+  - `content` - scripts and components to be injected as `content_script`
   - `background` - scripts for background.
   - `components` - auto-imported Vue components that are shared in popup and options page.
   - `styles` - styles shared in popup and options page
   - `assets` - assets used in Vue components
   - `manifest.ts` - manifest for the extension.
-- `extension` - extension package root.
-  - `assets` - static assets (mainly for `manifest.json`).
-  - `dist` - built files, also serve stub entry for Vite on development.
+- `dist` - extension package root.
 - `scripts` - development and bundling helper scripts.
 
 ### Development
@@ -104,12 +103,10 @@ Then **load extension in browser with the `extension/` folder**.
 For Firefox developers, you can run the following command instead:
 
 ```bash
-pnpm dev-firefox
+pnpm dev:firefox
 ```
 
-`web-ext` auto reload the extension when `extension/` files changed.
-
-> While Vite handles HMR automatically in the most of the case, [Extensions Reloader](https://chrome.google.com/webstore/detail/fimgfedafeadlieiabdeeaodndnlbhid) is still recommended for cleaner hard reloading.
+> While WebExtend handles HMR automatically in the most of the case, [Extensions Reloader](https://chrome.google.com/webstore/detail/fimgfedafeadlieiabdeeaodndnlbhid) is still recommended for cleaner hard reloading.
 
 ## Using Gitpod
 
