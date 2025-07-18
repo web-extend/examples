@@ -61,10 +61,6 @@ A WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/
 
 ## Use the Template
 
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-webext/generate).
-
 ### Clone to local
 
 If you prefer to do it manually with the cleaner git history

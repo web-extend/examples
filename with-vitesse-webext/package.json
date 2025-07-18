@@ -4,7 +4,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "description": "Migrate to WebExtend",
+  "description": "",
   "scripts": {
     "dev": "web-extend dev --open",
     "build": "web-extend build",
