@@ -1,5 +1,5 @@
-import './App.css';
-import { useState } from 'react';
+import "./App.css";
+import { useState } from "react";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -11,9 +11,10 @@ function App() {
   return (
     <div className="web-extend-content-container">
       {visible && (
-        <div className="web-extend-content">
-          <h1>WebExtend + React</h1>
-          <p>This is a content script.</p>
+        <div className="bg-white p-4 rounded-lg">
+          <h1 className="text-3xl font-bold underline text-black">
+            Hello world!
+          </h1>
         </div>
       )}
       <div onClick={toggle}>
@@ -23,7 +24,7 @@ function App() {
           xmlns="http://www.w3.org/2000/svg"
           width="48"
           height="48"
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: "pointer" }}
         >
           <title>web-extend</title>
           <circle cx="512" cy="512" r="512" fill="#1296db" />

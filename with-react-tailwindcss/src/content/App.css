@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 .web-extend-content-container {
   position: fixed;
   bottom: 20px;
