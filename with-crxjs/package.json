@@ -26,6 +26,6 @@
     "vite": "^6.2.0",
     "vite-plugin-zip-pack": "^1.2.4",
     "web-ext": "^8.8.0",
-    "web-extend": "^0.0.2"
+    "web-extend": "^0.0.3"
   }
 }
