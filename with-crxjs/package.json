@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.32",
-    "@rsbuild/core": "^1.4.6",
+    "@rsbuild/core": "^1.4.10",
     "@rsbuild/plugin-react": "^1.0.7",
     "@types/chrome": "^0.0.313",
     "@types/node": "^22.13.14",
