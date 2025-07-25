@@ -1,4 +1,3 @@
-import './App.css';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import { FloatButton } from 'antd';
 
@@ -7,7 +6,7 @@ function App() {
     <FloatButton
       icon={<QuestionCircleOutlined />}
       type="primary"
-      tooltip={<div>Hello</div>}
+      tooltip={<div>Hello World</div>}
     />
   );
 }

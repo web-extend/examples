@@ -9,12 +9,10 @@ function App() {
   }
 
   return (
-    <div className="web-extend-content-container">
+    <div className="fixed bottom-4 right-4 flex items-end z-1000">
       {visible && (
-        <div className="bg-white p-4 rounded-lg">
-          <h1 className="text-3xl font-bold underline text-black">
-            Hello world!
-          </h1>
+        <div className="mr-2 bg-white p-4 rounded-lg border border-gray-200">
+          <h1 className="text-xl font-bold underline">Hello world!</h1>
         </div>
       )}
       <div onClick={toggle}>
