@@ -2,6 +2,7 @@
   <div class="content">
     <h1>WebExtend + Vue</h1>
     <p>This is a web page.</p>
+    <el-button>I am ElButton</el-button>
   </div>
 </template>
 
