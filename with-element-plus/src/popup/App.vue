@@ -1,8 +1,13 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const count = ref(0);
+</script>
+
 <template>
   <div class="content">
-    <h1>WebExtend + Vue</h1>
-    <p>This is a web page.</p>
-    <el-button>I am ElButton</el-button>
+    <p>Count: {{ count }}</p>
+    <el-button type="primary" @click="count++">Click me</el-button>
   </div>
 </template>
 
@@ -10,16 +15,5 @@
 .content {
   text-align: center;
   padding: 12px;
-}
-
-.content h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.content p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.5;
 }
 </style>
