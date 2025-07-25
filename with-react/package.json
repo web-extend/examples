@@ -10,16 +10,16 @@
     "zip": "web-extend zip"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "^1.4.6",
-    "@rsbuild/plugin-react": "^1.3.2",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.2",
-    "web-ext": "^8.8.0",
-    "web-extend": "^0.0.2"
+    "@rsbuild/core": "^1.4.10",
+    "@rsbuild/plugin-react": "^1.3.4",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "typescript": "^5.8.3",
+    "web-ext": "^8.9.0",
+    "web-extend": "^0.0.3"
   }
 }
