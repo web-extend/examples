@@ -1,0 +1,23 @@
+{
+  "name": "with-vue-content-shadow-dom",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "web-extend dev --open",
+    "build": "web-extend build",
+    "preview": "web-extend preview",
+    "zip": "web-extend zip"
+  },
+  "dependencies": {
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.4.9",
+    "@rsbuild/plugin-vue": "^1.1.0",
+    "@types/chrome": "^0.1.1",
+    "typescript": "^5.8.3",
+    "web-ext": "^8.9.0",
+    "web-extend": "~0.0.3"
+  }
+}
